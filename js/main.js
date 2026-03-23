@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function loadLiveMatches() {
         const container = document.getElementById('live-matches-container');
         try {
-            const matches = await apiGet(API_FOOTBALL.ENDPOINTS.LIVE);
+            const matches = await fetchLiveMatches();
             container.innerHTML = ''; // Clear skeleton
 
             if (!matches || matches.length === 0) {
