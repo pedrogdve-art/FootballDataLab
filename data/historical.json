@@ -1,0 +1,32 @@
+[
+    {
+        "season": "24/25",
+        "player": "Mbappé",
+        "goals": 31,
+        "team": "Real Madrid"
+    },
+    {
+        "season": "23/24",
+        "player": "Dovbyk",
+        "goals": 24,
+        "team": "Girona"
+    },
+    {
+        "season": "22/23",
+        "player": "Lewandowski",
+        "goals": 23,
+        "team": "Barcelona"
+    },
+    {
+        "season": "21/22",
+        "player": "Benzema",
+        "goals": 27,
+        "team": "Real Madrid"
+    },
+    {
+        "season": "20/21",
+        "player": "Messi",
+        "goals": 30,
+        "team": "Barcelona"
+    }
+]

@@ -1,0 +1,11 @@
+node_modules/ 
+AppData/
+OneDrive/
+Documents/
+Downloads/
+Desktop/
+.anaconda/
+.conda/
+.gemini/
+.vscode/
+anaconda3/
