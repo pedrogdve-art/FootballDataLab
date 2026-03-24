@@ -217,12 +217,21 @@ const explorerApp = {
             $('#explorerTable').DataTable().destroy();
         }
 
+        const normalizeLiga = (ligaName) => {
+            if (!ligaName) return '';
+            const map = {
+                'laliga': 'laliga', 'premier league': 'premier', 'bundesliga': 'bundesliga',
+                'seriea': 'serie a', 'serie a': 'serie a', 'ligue 1': 'ligue 1', 'todas': 'todas', 'all': 'all', 'premier': 'premier'
+            };
+            return map[ligaName.toLowerCase()] || ligaName.toLowerCase();
+        };
+
         const liga = this.fLiga.value;
         const pos = this.fPos.value;
         const tbody = document.getElementById('explorerBody');
 
         let filteredPlayers = this.allPlayers.filter(p => {
-            const mLiga = liga === 'all' || p.liga === liga;
+            const mLiga = liga === 'all' || normalizeLiga(p.liga) === normalizeLiga(liga);
             const mPos = pos === 'all' || p.pos === pos;
             return mLiga && mPos;
         });

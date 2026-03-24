@@ -1,6 +1,6 @@
 ﻿const API_FOOTBALL = {
     BASE_URL: 'https://v3.football.api-sports.io/',
-    // HEADERS: { 'x-apisports-key': 'TU_NUEVA_KEY_AQUI' }, // Regístrate: https://api-sports.io/
+    // HEADERS: { 'x-apisports-key': 'TU_NUEVA_KEY_AQUI' }, // Registrate: https://api-sports.io/
     ENDPOINTS: { LIVE: 'fixtures?live=all' },
     CACHE_DURATION: 15 * 60 * 1000 // 15 minutes
 };
@@ -8,7 +8,7 @@
 const BIG5_LEAGUES = { 'Premier League': 39, 'La Liga': 140, 'Serie A': 135, 'Bundesliga': 78, 'Ligue 1': 61 };
 
 const fallbackLiveData = [
-    { fixture: { id: 1, status: { elapsed: 76 } }, teams: { home: { name: "Real Madrid" }, away: { name: "Atlético" } }, goals: { home: 1, away: 0 } },
+    { fixture: { id: 1, status: { elapsed: 76 } }, teams: { home: { name: "Real Madrid" }, away: { name: "Atletico" } }, goals: { home: 1, away: 0 } },
     { fixture: { id: 2, status: { elapsed: 45 } }, teams: { home: { name: "Barcelona" }, away: { name: "Sevilla" } }, goals: { home: 2, away: 1 } },
     { fixture: { id: 3, status: { elapsed: 12 } }, teams: { home: { name: "Girona" }, away: { name: "Betis" } }, goals: { home: 0, away: 0 } }
 ];

@@ -46,7 +46,7 @@
         <div id="particles-js" class="hero-particles"></div>
         <div class="hero-content">
             <h1 class="hero-title tracking-tight">Data-Driven <span class="gradient-text">Scouting</span></h1>
-            <p class="hero-subtitle">Big 5 Analytics ÔÇó Live Odds ÔÇó AI Profiling</p>
+            <p class="hero-subtitle">Big 5 Analytics ÔÇo Live Odds ÔÇo AI Profiling</p>
 
             <div class="hero-widgets">
                 <!-- PANEL 1: LIVE MATCHES -->
@@ -65,7 +65,7 @@
                 <!-- PANEL 2: KAGGLE STATS -->
                 <div class="glass-card widget-card glow-blue">
                     <div class="card-header">
-                        <h3><i class="fa-solid fa-database"></i> Kaggle Stats 25/26</h3>
+                        <h3><i class="fa-solid fa-database"></i> Kaggle Stats </h3>
                         <span class="badge badge-blue">Big 5</span>
                     </div>
                     <div class="card-body" id="kaggle-stats-container">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
 
-                <!-- PANEL 3: Histórico -->
+                <!-- PANEL 3: Historico -->
                 <div class="glass-card widget-card glow-green">
                     <div class="card-header">
                         <h3><i class="fa-solid fa-trophy text-gold"></i> Historical</h3>
@@ -108,7 +108,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2><span class="text-blue">Big 5</span> Explorer</h2>
-                    <p>Filtros avanzados en tiempo real sobre dataset Kaggle 25/26</p>
+                    <p>Filtros avanzados en tiempo real sobre dataset Kaggle </p>
                 </div>
 
                 <!-- Filters Bar -->
@@ -118,13 +118,14 @@
                         <select id="filterLiga">
                             <option value="all">Todas (Big 5)</option>
                             <option value="LaLiga">LaLiga</option>
-                            <option value="Premier League">Premier League</option>
+                            <option value="Premier League">Premier</option>
                             <option value="Serie A">Serie A</option>
                             <option value="Bundesliga">Bundesliga</option>
+                            <option value="Ligue 1">Ligue 1</option>
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label>Posición</label>
+                        <label>Posicion</label>
                         <select id="filterPos">
                             <option value="all">Todas</option>
                             <option value="FW">Delanteros (FW)</option>
@@ -146,7 +147,7 @@
                         <label>Buscar</label>
                         <div class="search-input-wrapper">
                             <i class="fa-solid fa-search"></i>
-                            <input type="text" id="searchPlayer" placeholder="Ej: Álvarez, Mbappé...">
+                            <input type="text" id="searchPlayer" placeholder="Ej: alvarez, Mbappe...">
                         </div>
                     </div>
                 </div>
@@ -161,7 +162,7 @@
                                 <th>Equipo</th>
                                 <th>Liga</th>
                                 <th>MV(€)</th>
-                                <th>Acción</th>
+                                <th>Accion</th>
                             </tr>
                         </thead>
                         <tbody id="explorerBody">
@@ -171,7 +172,7 @@
                 </div>
                 <div class="table-footer">
                     <span id="playerCount">Mostrando 0 jugadores</span>
-                    <button id="loadMoreBtn" class="btn btn-secondary btn-sm hidden">Cargar mís</button>
+                    <button id="loadMoreBtn" class="btn btn-secondary btn-sm hidden">Cargar mis</button>
                 </div>
             </div>
         </section>
@@ -199,7 +200,7 @@
                         </div>
 
                         <div class="next-match mt-4">
-                            <h4>Próximo Partido (API)</h4>
+                            <h4>Proximo Partido (API)</h4>
                             <p class="text-red font-light">Cargando...</p>
                         </div>
 
@@ -208,8 +209,8 @@
                             <h4><i class="fa-solid fa-brain text-blue"></i> AI Insights</h4>
                             <ul class="insights-list font-light mt-2" style="font-size:0.85rem">
                                 <li>Rendimiento ofensivo por encima del percentil 90.</li>
-                                <li>Volumen de tiros consistente con xG, finalización sostenible.</li>
-                                <li>Participación en progresión estancada los óltimos 3 meses.</li>
+                                <li>Volumen de tiros consistente con xG, finalizacion sostenible.</li>
+                                <li>Participacion en progresion estancada los oltimos 3 meses.</li>
                             </ul>
                         </div>
                     </div>
@@ -239,7 +240,7 @@
                             <p id="aiPrompt" class="code-font font-light"
                                 style="font-size: 0.85rem; color: var(--color-blue); background:rgba(0,0,0,0.2); padding:10px; border-radius:5px;"
                                 contenteditable="true">
-                                Selecciona un jugador para generar un prompt de anílisis avanzado.
+                                Selecciona un jugador para generar un prompt de anilisis avanzado.
                             </p>
                         </div>
                     </div>
@@ -251,19 +252,19 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Market Value <span class="text-green">Oportunidades</span></h2>
-                    <p>Anílisis de desviaciones de valor basado en rendimiento vs precio mercado</p>
+                    <p>Anilisis de desviaciones de valor basado en rendimiento vs precio mercado</p>
                 </div>
 
                 <div class="market-split">
                     <!-- Left: Distribution UI Mock -->
                     <div class="glass-panel market-chart-box">
                         <div class="d-flex justify-between mb-2">
-                            <h4>Distribución ValueScore vs Edad</h4>
+                            <h4>Distribucion ValueScore vs Edad</h4>
                             <span class="badge badge-green">AI Model Beta</span>
                         </div>
                         <div class="heatmap-placeholder"
                             style="height:300px; background: rgba(0,0,0,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color: var(--text-muted); border: 1px dashed var(--color-green);">
-                            [ Grífico de Dispersión Interactivo ]
+                            [ Grifico de Dispersion Interactivo ]
                         </div>
                     </div>
 
@@ -299,16 +300,21 @@
 
                 <div class="cases-grid">
                     <!-- Case 1 -->
-                    <div class="glass-card case-card glow-blue">
+                    <div class="glass-card case-card glow-blue" style="cursor: pointer;"
+                        onclick="const fd = this.querySelector('.flashcard-detail'); fd.style.display = fd.style.display === 'none' ? 'block' : 'none';">
                         <div class="case-body">
                             <span class="badge badge-blue mb-2">Tactical Battle</span>
-                            <h3>Mbappé vs Haaland: El duelo de xG y Gravedad Ofensiva</h3>
-                            <div class="mt-2" style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px;">
+                            <h3>Mbappe vs Haaland: duelo xG/PrgP</h3>
+                            <p class="text-muted font-light mt-2" style="font-size:0.9rem;">Analisis tactico de gravedad
+                                ofensiva y definicion.</p>
+
+                            <div class="flashcard-detail mt-3"
+                                style="display: none; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1);">
                                 <table
                                     style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: center;">
                                     <tr style="border-bottom: 1px solid var(--glass-border);">
-                                        <th style="padding:4px; text-align:left;">Métrica</th>
-                                        <th>Mbappé (RM)</th>
+                                        <th style="padding:4px; text-align:left;">Metrica</th>
+                                        <th>Mbappe (RM)</th>
                                         <th>Haaland (City)</th>
                                     </tr>
                                     <tr>
@@ -328,60 +334,64 @@
                                     </tr>
                                 </table>
                             </div>
-                            <a href="#" class="mt-4 read-more">Ver stats completos <i
-                                    class="fa-solid fa-arrow-right"></i></a>
+                            <span class="mt-4 read-more" style="display:inline-block;">Desplegar flashcard <i
+                                    class="fa-solid fa-chevron-down"></i></span>
                         </div>
                     </div>
 
                     <!-- Case 2 -->
-                    <div class="glass-card case-card glow-green">
+                    <div class="glass-card case-card glow-green" style="cursor: pointer;"
+                        onclick="const fd = this.querySelector('.flashcard-detail'); fd.style.display = fd.style.display === 'none' ? 'block' : 'none';">
                         <div class="case-body">
                             <span class="badge badge-green mb-2">Hidden Gems</span>
-                            <h3>5 Defensas Jóvenes de la Serie A</h3>
-                            <div class="mt-2 text-muted font-light" style="font-size:0.85rem;">
-                                <ul style="list-style: none; padding: 0;">
+                            <h3>5 Defensas Jovenes SerieA</h3>
+                            <p class="text-muted font-light mt-2" style="font-size:0.9rem;">Centrales sub-25 con perfil
+                                dominate en juego aereo y duelos.</p>
+
+                            <div class="flashcard-detail mt-3"
+                                style="display: none; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1);">
+                                <ul style="list-style: none; padding: 0; font-size:0.85rem;"
+                                    class="text-muted font-light">
                                     <li
                                         style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
-                                        <div style="display:flex; align-items:center; gap: 10px;">
-                                            <i class="fa-solid fa-shield-halved text-green"></i>
-                                            <strong>Scalvini</strong> (Atalanta, 21a) <br> <span
-                                                style="font-size:0.75rem;">Duelos 65%, Tackles 2.8</span>
-                                        </div>
-                                    </li>
+                                        1. <strong class="text-main">Scalvini</strong> (Atalanta, 21a) - Duelos 65%,
+                                        Tackles 2.8</li>
                                     <li
                                         style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
-                                        <div style="display:flex; align-items:center; gap: 10px;">
-                                            <i class="fa-solid fa-shield-halved text-green"></i> <strong>Gabbia</strong>
-                                            (Milan, 24a) <br> <span style="font-size:0.75rem;">Aerials 68%</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div style="display:flex; align-items:center; gap: 10px;">
-                                            <i class="fa-solid fa-shield-halved text-green"></i>
-                                            <strong>Bastoni</strong> (Inter, 24a) <br> <span
-                                                style="font-size:0.75rem;">PrgP 7.2</span>
-                                        </div>
-                                    </li>
+                                        2. <strong class="text-main">Gabbia</strong> (Milan, 24a) - Aerials 68%</li>
+                                    <li
+                                        style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
+                                        3. <strong class="text-main">Bastoni</strong> (Inter, 24a) - PrgP 7.2</li>
+                                    <li
+                                        style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
+                                        4. <strong class="text-main">Thiaw</strong> (Milan, 22a) - Duelos 62%</li>
+                                    <li>5. <strong class="text-main">Calafiori</strong> (Bologna, 22a) - Interceptions
+                                        2.1</li>
                                 </ul>
                             </div>
-                            <a href="#" class="mt-4 read-more">Ver perfil <i class="fa-solid fa-arrow-right"></i></a>
+                            <span class="mt-4 read-more" style="display:inline-block;">Desplegar flashcard <i
+                                    class="fa-solid fa-chevron-down"></i></span>
                         </div>
                     </div>
 
                     <!-- Case 3 -->
-                    <div class="glass-card case-card glow-red">
+                    <div class="glass-card case-card glow-red" style="cursor: pointer;"
+                        onclick="const fd = this.querySelector('.flashcard-detail'); fd.style.display = fd.style.display === 'none' ? 'block' : 'none';">
                         <div class="case-body">
                             <span class="badge badge-red mb-2">System Fit</span>
-                            <h3>Simulación 10 Pivotes en el Medio Campo del Atleti</h3>
-                            <div class="mt-2"
-                                style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; overflow-x: auto;">
+                            <h3>Simulacion 10 Pivotes en el Medio Campo del Atleti</h3>
+                            <p class="text-muted font-light mt-2" style="font-size:0.9rem;">Modelaje tactico del bloque
+                                de mediocentros bajo el sistema de Simeone.</p>
+
+                            <div class="flashcard-detail mt-3"
+                                style="display: none; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); overflow-x: auto;">
                                 <table
                                     style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left;">
                                     <tr style="border-bottom: 1px solid var(--glass-border);">
                                         <th style="padding:4px;">Jugador</th>
-                                        <th>Duels/90</th>
-                                        <th>Tackles</th>
-                                        <th>Pases Progresivos</th>
+                                        <th>D/90</th>
+                                        <th>Tk</th>
+                                        <th>Prg</th>
                                     </tr>
                                     <tr>
                                         <td style="padding:4px;">Koke</td>
@@ -401,10 +411,22 @@
                                         <td class="text-green">2.5</td>
                                         <td>3.9</td>
                                     </tr>
+                                    <tr>
+                                        <td style="padding:4px;">Llorente</td>
+                                        <td class="text-green">7.9</td>
+                                        <td>1.9</td>
+                                        <td class="text-blue">4.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:4px;">Saul</td>
+                                        <td>5.8</td>
+                                        <td>1.4</td>
+                                        <td>2.8</td>
+                                    </tr>
                                 </table>
                             </div>
-                            <a href="#" class="mt-4 read-more">Ver simulación completa <i
-                                    class="fa-solid fa-arrow-right"></i></a>
+                            <span class="mt-4 read-more" style="display:inline-block;">Desplegar flashcard <i
+                                    class="fa-solid fa-chevron-down"></i></span>
                         </div>
                     </div>
                 </div>
@@ -414,8 +436,8 @@
         <section id="contact" class="section contact-section">
             <div class="container" style="max-width: 800px;">
                 <div class="section-header">
-                    <h2>Solicitar <span class="text-red">Asesor+¡a</span></h2>
-                    <p>Integración con Scouting Pro y Datasets Privados. Hablemos de Fótbol.</p>
+                    <h2>Solicitar <span class="text-red">Asesoria</span></h2>
+                    <p>Integracion con Scouting Pro y Datasets Privados. Hablemos de Futbol.</p>
                 </div>
 
                 <div class="glass-panel text-center pb-4 mb-4">
@@ -439,15 +461,15 @@
                             <label for="email">E-mail</label>
                             <input type="email" id="email" required class="form-control">
                             <span class="error-msg text-red font-light" style="font-size:0.8rem; display:none;">Email
-                                invílido</span>
+                                invalido</span>
                         </div>
                     </div>
                     <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label for="service">Interés Principal</label>
+                        <label for="service">Interes Principal</label>
                         <select id="service" class="form-control">
-                            <option value="api">Integración API-Football</option>
+                            <option value="api">Integracion API-Football</option>
                             <option value="data">Modelos Big Data Kaggle</option>
-                            <option value="player">Anílisis Individual (Video + Data)</option>
+                            <option value="player">Anilisis Individual (Video + Data)</option>
                             <option value="club">Consultor+¡a Club / Agencia</option>
                         </select>
                     </div>
