@@ -62,17 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
             container.innerHTML = ''; // Clear skeleton
 
             if (!matches || matches.length === 0) {
-                container.innerHTML = '<p class="stat-row">No live Big 5 matches currently.</p>';
+                container.innerHTML = '<p class="stat-row text-muted">No hay lives ahora. Actualiza en 15s.</p>';
                 return;
             }
 
             // Take top 3
             matches.slice(0, 3).forEach(m => {
-                const home = m.teams.home.name;
-                const away = m.teams.away.name;
-                const homeG = m.goals.home ?? 0;
-                const awayG = m.goals.away ?? 0;
-                const time = m.fixture.status.elapsed ? `${m.fixture.status.elapsed}'` : m.fixture.status.short;
+                const home = m.teams?.home?.name || 'Local';
+                const away = m.teams?.away?.name || 'Visitante';
+                const homeG = m.goals?.home ?? 0;
+                const awayG = m.goals?.away ?? 0;
+                const time = m.fixture?.status?.elapsed ? `${m.fixture.status.elapsed}'` : 'ON';
 
                 container.innerHTML += `
                     <div class="match-row">
@@ -230,26 +230,27 @@ const explorerApp = {
         let rows = '';
         filteredPlayers.forEach(p => {
             let contextCells = '';
-            if (pos === 'FW' || pos === 'MF' || pos === 'all') {
+            const mapPos = pos.toUpperCase();
+            if (mapPos === 'FW' || mapPos === 'MF' || mapPos === 'ALL') {
                 contextCells = `
-                    <td class="metric-high">${p.goles90 || '0.00'}</td>
-                    <td>${p.xg || '0.0'}</td>
-                    <td>${p.xag || '0.0'}</td>
-                    <td>${p.prgp || '0.0'}</td>
+                    <td class="metric-high">${p.goles90 || p['goles/90'] || p.goles_90 || 0.00}</td>
+                    <td>${p.xg || p.xG || 0.0}</td>
+                    <td>${p.xag || p.xAG || 0.0}</td>
+                    <td>${p.prgp || p.PrgP || p['PrgP/90'] || 0.0}</td>
                 `;
-            } else if (pos === 'DF') {
+            } else if (mapPos === 'DF') {
                 contextCells = `
-                    <td class="metric-high">${p.duelos || '60'}%</td>
-                    <td>${p.tackles || '2.0'}</td>
-                    <td>${p.aerials || '55'}%</td>
-                    <td>${p.prgp || '0.0'}</td>
+                    <td class="metric-high">${p.duelos || p.duels || p['duels won'] || p['duelos%'] || 0}%</td>
+                    <td>${p.tackles || p['tackles90'] || p.tackles90 || 0}</td>
+                    <td>${p.aerials || p['aerial won'] || p['aerials won'] || p['aerials%'] || 0}%</td>
+                    <td>${p.prgp || p.PrgP || p['PrgP/90'] || 0.0}</td>
                 `;
-            } else if (pos === 'GK') {
+            } else if (mapPos === 'GK') {
                 contextCells = `
-                    <td class="metric-high">${p.pi || '70'}%</td>
-                    <td>${p.saves90 || '2.0'}</td>
-                    <td>${p.rating || '6.5'}</td>
-                    <td>${p.psxg > 0 ? '+' + p.psxg : (p.psxg || '0.0')}</td>
+                    <td class="metric-high">${p.pi || p['playing time pi'] || p['PI'] || p['pi%'] || 0}%</td>
+                    <td>${p.saves90 || p.saves || p['saves/90'] || p['saves_90'] || 0}</td>
+                    <td>${p.rating || p.Rating || 0}</td>
+                    <td>${p.psxg || p.psxG || p['ps-xG'] || p['psxg+/-'] || 0}</td>
                 `;
             }
 
