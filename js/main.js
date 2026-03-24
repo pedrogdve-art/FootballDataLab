@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MAIN.JS - FootballDataLab 
  * Handles DOM integration, Theme toggling, and Widget populations.
  */
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             container.innerHTML = `
                 <div class="stat-row">
-                    <strong>Top Goleador:</strong> <span>Mbappé (23g)</span>
+                    <strong>Top Goleador:</strong> <span>MbappÃ© (23g)</span>
                 </div>
                 <div class="stat-row">
                     <strong>Eficacia:</strong> <span class="text-green">1.39/90 min</span>
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <strong>Pichichi '24:</strong> <span>Dovbyk (24g)</span>
                 </div>
                 <div class="stat-row">
-                    <strong>Bota Oro '25:</strong> <span class="text-gold">Mbappé (31g)</span>
+                    <strong>Bota Oro '25:</strong> <span class="text-gold">MbappÃ© (31g)</span>
                 </div>
             `;
         }, 600);
@@ -195,7 +195,7 @@ const explorerApp = {
         } else if (pos === 'GK') {
             html += `<th>PI%</th><th>Saves/90</th><th>Rating</th><th>PSxG+/-</th>`;
         }
-        html += `<th>MV(€)</th>`;
+        html += `<th>MV(â¬)</th>`;
         this.tableHeaders.innerHTML = html;
     },
 
@@ -267,7 +267,7 @@ const explorerApp = {
                     <td class="col-team">${p.equipo}</td>
                     <td>${p.liga}</td>
                     ${contextCells}
-                    <td class="tag-mv">€${p.mv || '0'}m</td>
+                    <td class="tag-mv">â¬${p.mv || '0'}m</td>
                 </tr>
             `;
         });
@@ -327,7 +327,7 @@ const marketApp = {
                         <div class="img-thumb"></div> 
                         ${p.jugador} <span class="badge ${p.posicion === 'FW' ? 'badge-red' : 'badge-blue'}">${p.posicion}</span>
                     </td>
-                    <td class="tag-mv">€${p.mv || 0}m</td>
+                    <td class="tag-mv">â¬${p.mv || 0}m</td>
                     <td class="text-muted">@${p.odds}</td>
                     <td><span class="badge-score ${isHigh}">${p.valueScore}</span></td>
                 </tr>
@@ -338,7 +338,7 @@ const marketApp = {
 
         // Heatmap Mock logic
         const heatmap = document.querySelector('.heatmap-placeholder');
-        if (heatmap) heatmap.innerHTML = `<i class="fa-solid fa-chart-scatter text-green fa-4x opacity-50"></i><br/>Visualización D3.js/Chart.js Lista para conectar`;
+        if (heatmap) heatmap.innerHTML = `<i class="fa-solid fa-chart-scatter text-green fa-4x opacity-50"></i><br/>VisualizaciÃ³n D3.js/Chart.js Lista para conectar`;
     }
 };
 

@@ -1,37 +1,34 @@
 # Football Data Lab 📈
 
-Aplicación premium de *Scouting & Analytics* para las 5 grandes ligas (Big 5) 25/26. Integra métricas avanzadas (xG, xAG, PrgP) y el uso en directo de la API de Football (`api-sports.io`) con estrategias evasivas de CORS y optimización para caché.
+## 🏆 Proyecto de Análisis Avanzado Big 5
+Plataforma de Scouting interactiva (PWA Ready) para visualizar datos estadísticos procedentes de Kaggle fusionados con resultados en directo de la **API-Sports**.
 
-## 🚀 Despliegue en GitHub Pages (v3.0)
+### 🔧 ChangeLog (v3.0.0)
+- **UTF-8 Fix**: Todos los caracteres, tildes (Mbappé) y símbolos de UI renderizan correctamente.
+- **Posiciones Robustas**: El motor de `DataTables` renderiza el 100% de las celdas (DF, MF, GK, FW) mapeando inteligentemente diversas nomenclaturas del dataset JSON nativo (`duels won`, `playing time pi`, `xG`...).
+- **CORS API Proxy Seguro**: El fetcher en vivo ahora usa `api.allorigins.win/get` con JSON parser para evadir bloqueos de infraestructura en GitHub Pages y ocultar el volcado de la clave cruda si no hay *headers* de Request.
+- **Multi-Liga Big 5**: Funciones implementadas (`fetchBig5Live`, `fetchBig5Players`) para atacar las 5 grandes ligas mediante Selectors.
+- **UI Premium Cases**: Inyectado UI mock interactivo para Análisis de Duelos de xG, Defensas Serie A jóvenes y Simulación de táctica del Atleti.
 
-Este repositorio ha sido configurado para operar de forma estática en la raíz:
-- **Site URL**: [https://pedrogdve-art.github.io/FootballDataLab/](https://pedrogdve-art.github.io/FootballDataLab/)
-- **Live Matches Fetching**: Servido mediante un proxy intermedio `api.allorigins.win/get` con parsing customizado a `.contents` para evadir bloqueos severos de navegadores y Rate Limits.
-- **Progressive Web App (PWA)**: Incluye `manifest.json` y `sw.js` funcionales para instalación nativa.
+### 🔑 API Key Setup (Instrucciones)
+Actualmente, si la clave se satura (límite de peticiones de capa gratuita), saltará un fallback. Para habilitar un flujo 100% permanente:
+1. Regístrate gratuitamente en [API-Sports](https://api-sports.io/register).
+2. Obtén tu nueva `x-apisports-key`.
+3. Edita el archivo `js/api.js` y descomenta las HEADERS dentro de `API_FOOTBALL`:
+```javascript
+HEADERS: {
+    'x-apisports-key': 'TU_NUEVA_CLAVE_AQUÍ'
+}
+```
 
-## 🛠️ Stack Tecnológico
-- **UI/UX**: HTML5 Semántico + Vanilla CSS con *Glassmorphism* (Backdrop-filter) y Paleta Oscura "Neon" (Tailwind no requerido).
-- **Core Engine**: Vanilla JS, ES6 Modules.
-- **Gráficos y Visualización**: `Chart.js` (Radar, Bar, Line).
-- **Tratamiento Masivo de Tablas**: `DataTables.net` (jQuery) optimizado y unificado para llaves de Kaggle en diferentes dialectos (Spanglish variables).
-
-## 🏆 Uso de API Key (Live Data)
-Por defecto, e internamente en `js/api.js`, la key para extraer datos en vivo es: **811321e8c57f96498955c095a3c86d74**. Esta key se pasa implícitamente, pero si tienes problemas de *quota diaria*, puedes habilitarla en las `HEADERS` directamente:
-
-1. Regístrate en [API-Sports](https://api-sports.io/).
-2. Reemplaza la cabecera en `api.js`:
-    ```javascript
-    HEADERS: {
-      'x-apisports-key': 'TU_NUEVA_KEY',
-      'x-rapidapi-host': 'v3.football.api-sports.io'
-    }
-    ```
-*(Por motivos de seguridad y GitHub Pages, se ha implementado un fallback en Duro local si la red está saturada).*
-
-## 📌 Guía de Despliegue para Actualizaciones
+### 🚀 Despliegue en GitHub Pages
+Para desplegar futuras versiones en producción, simplemente ejecuta los comandos desde la RAÍZ del proyecto (`FootballDataLab`):
 ```bash
 git add .
-git commit -m "Update"
+git commit -m "UI Updates"
 git push origin main
 ```
-Luego espera 1 minuto a que GitHub Actions (`pages build and deployment`) consolide los ficheros en la URL pública.
+Espera 1 minuto a que GitHub Actions termine, y podrás ver la web live sin errores 404.
+
+### 💻 Test Local
+Carga `index.html` con Live Server (VS Code Extension). Los *Service Workers* (PWA) cachearán la carga automáticamente para operar offline.
