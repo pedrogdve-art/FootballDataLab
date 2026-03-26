@@ -1,8 +1,10 @@
 ﻿const API_FOOTBALL = {
     BASE_URL: 'https://v3.football.api-sports.io/',
-    // HEADERS: { 'x-apisports-key': 'TU_NUEVA_KEY_AQUI' }, // Registrate: https://api-sports.io/
+    HEADERS: {
+        'x-apisports-key': '811321e8c57f96498955c095a3c86d74'
+    },
     ENDPOINTS: { LIVE: 'fixtures?live=all' },
-    CACHE_DURATION: 15 * 60 * 1000 // 15 minutes
+    CACHE_DURATION: 15 * 60 * 1000 // 15 minutos
 };
 
 const BIG5_LEAGUES = { 'Premier League': 39, 'La Liga': 140, 'Serie A': 135, 'Bundesliga': 78, 'Ligue 1': 61 };

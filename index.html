@@ -300,133 +300,139 @@
 
                 <div class="cases-grid">
                     <!-- Case 1 -->
-                    <div class="glass-card case-card glow-blue" style="cursor: pointer;"
-                        onclick="const fd = this.querySelector('.flashcard-detail'); fd.style.display = fd.style.display === 'none' ? 'block' : 'none';">
+                    <div class="glass-card case-card glow-blue">
                         <div class="case-body">
                             <span class="badge badge-blue mb-2">Tactical Battle</span>
-                            <h3>Mbappe vs Haaland: duelo xG/PrgP</h3>
+                            <h3>Mbappe vs Haaland: xG duel</h3>
                             <p class="text-muted font-light mt-2" style="font-size:0.9rem;">Analisis tactico de gravedad
                                 ofensiva y definicion.</p>
 
-                            <div class="flashcard-detail mt-3"
-                                style="display: none; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1);">
-                                <table
-                                    style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: center;">
-                                    <tr style="border-bottom: 1px solid var(--glass-border);">
-                                        <th style="padding:4px; text-align:left;">Metrica</th>
-                                        <th>Mbappe (RM)</th>
-                                        <th>Haaland (City)</th>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px; text-align:left;">xG/90</td>
-                                        <td>0.85</td>
-                                        <td class="text-green font-bold">0.92</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px; text-align:left;">PrgP</td>
-                                        <td class="text-blue font-bold">4.2</td>
-                                        <td>3.8</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px; text-align:left;">G/A</td>
-                                        <td>1.1</td>
-                                        <td class="text-green font-bold">1.3</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <span class="mt-4 read-more" style="display:inline-block;">Desplegar flashcard <i
-                                    class="fa-solid fa-chevron-down"></i></span>
+                            <details class="mt-3">
+                                <summary
+                                    style="cursor:pointer; color:var(--text-main); font-weight:bold; margin-bottom:10px;">
+                                    Ver detalle <i class="fa-solid fa-chevron-down ml-2"></i></summary>
+                                <div class="flashcard-detail"
+                                    style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1);">
+                                    <table
+                                        style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: center;">
+                                        <tr style="border-bottom: 1px solid var(--glass-border);">
+                                            <th style="padding:4px; text-align:left;">Metrica</th>
+                                            <th>Mbappe (RM)</th>
+                                            <th>Haaland (City)</th>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px; text-align:left;">xG/90</td>
+                                            <td>0.85</td>
+                                            <td class="text-green font-bold">0.92</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px; text-align:left;">PrgP</td>
+                                            <td class="text-blue font-bold">4.2</td>
+                                            <td>3.8</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px; text-align:left;">G/A</td>
+                                            <td>1.1</td>
+                                            <td class="text-green font-bold">1.3</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </details>
                         </div>
                     </div>
 
                     <!-- Case 2 -->
-                    <div class="glass-card case-card glow-green" style="cursor: pointer;"
-                        onclick="const fd = this.querySelector('.flashcard-detail'); fd.style.display = fd.style.display === 'none' ? 'block' : 'none';">
+                    <div class="glass-card case-card glow-green">
                         <div class="case-body">
                             <span class="badge badge-green mb-2">Hidden Gems</span>
                             <h3>5 Defensas Jovenes SerieA</h3>
                             <p class="text-muted font-light mt-2" style="font-size:0.9rem;">Centrales sub-25 con perfil
-                                dominate en juego aereo y duelos.</p>
+                                dominante en juego aereo y duelos.</p>
 
-                            <div class="flashcard-detail mt-3"
-                                style="display: none; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1);">
-                                <ul style="list-style: none; padding: 0; font-size:0.85rem;"
-                                    class="text-muted font-light">
-                                    <li
-                                        style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
-                                        1. <strong class="text-main">Scalvini</strong> (Atalanta, 21a) - Duelos 65%,
-                                        Tackles 2.8</li>
-                                    <li
-                                        style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
-                                        2. <strong class="text-main">Gabbia</strong> (Milan, 24a) - Aerials 68%</li>
-                                    <li
-                                        style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
-                                        3. <strong class="text-main">Bastoni</strong> (Inter, 24a) - PrgP 7.2</li>
-                                    <li
-                                        style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
-                                        4. <strong class="text-main">Thiaw</strong> (Milan, 22a) - Duelos 62%</li>
-                                    <li>5. <strong class="text-main">Calafiori</strong> (Bologna, 22a) - Interceptions
-                                        2.1</li>
-                                </ul>
-                            </div>
-                            <span class="mt-4 read-more" style="display:inline-block;">Desplegar flashcard <i
-                                    class="fa-solid fa-chevron-down"></i></span>
+                            <details class="mt-3">
+                                <summary
+                                    style="cursor:pointer; color:var(--text-green); font-weight:bold; margin-bottom:10px;">
+                                    Ver detalle <i class="fa-solid fa-chevron-down ml-2"></i></summary>
+                                <div class="flashcard-detail"
+                                    style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1);">
+                                    <ul style="list-style: none; padding: 0; font-size:0.85rem;"
+                                        class="text-muted font-light">
+                                        <li
+                                            style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
+                                            1. <strong class="text-main">Scalvini</strong> (Atalanta, 21a) - Duelos 65%,
+                                            Tackles 2.8</li>
+                                        <li
+                                            style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
+                                            2. <strong class="text-main">Gabbia</strong> (Milan, 24a) - Aerials 68%</li>
+                                        <li
+                                            style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
+                                            3. <strong class="text-main">Bastoni</strong> (Inter, 24a) - PrgP 7.2</li>
+                                        <li
+                                            style="margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px;">
+                                            4. <strong class="text-main">Thiaw</strong> (Milan, 22a) - Duelos 62%</li>
+                                        <li>5. <strong class="text-main">Calafiori</strong> (Bologna, 22a) -
+                                            Interceptions 2.1</li>
+                                    </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
 
                     <!-- Case 3 -->
-                    <div class="glass-card case-card glow-red" style="cursor: pointer;"
-                        onclick="const fd = this.querySelector('.flashcard-detail'); fd.style.display = fd.style.display === 'none' ? 'block' : 'none';">
+                    <div class="glass-card case-card glow-red">
                         <div class="case-body">
                             <span class="badge badge-red mb-2">System Fit</span>
-                            <h3>Simulacion 10 Pivotes en el Medio Campo del Atleti</h3>
+                            <h3>Simulacion 10 Pivotes Atleti</h3>
                             <p class="text-muted font-light mt-2" style="font-size:0.9rem;">Modelaje tactico del bloque
                                 de mediocentros bajo el sistema de Simeone.</p>
 
-                            <div class="flashcard-detail mt-3"
-                                style="display: none; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); overflow-x: auto;">
-                                <table
-                                    style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left;">
-                                    <tr style="border-bottom: 1px solid var(--glass-border);">
-                                        <th style="padding:4px;">Jugador</th>
-                                        <th>D/90</th>
-                                        <th>Tk</th>
-                                        <th>Prg</th>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px;">Koke</td>
-                                        <td>6.2</td>
-                                        <td>1.8</td>
-                                        <td>4.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px;">De Paul</td>
-                                        <td class="text-blue">7.5</td>
-                                        <td>2.1</td>
-                                        <td class="text-green">5.8</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px;">Barrios</td>
-                                        <td class="text-green">8.1</td>
-                                        <td class="text-green">2.5</td>
-                                        <td>3.9</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px;">Llorente</td>
-                                        <td class="text-green">7.9</td>
-                                        <td>1.9</td>
-                                        <td class="text-blue">4.5</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding:4px;">Saul</td>
-                                        <td>5.8</td>
-                                        <td>1.4</td>
-                                        <td>2.8</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <span class="mt-4 read-more" style="display:inline-block;">Desplegar flashcard <i
-                                    class="fa-solid fa-chevron-down"></i></span>
+                            <details class="mt-3">
+                                <summary
+                                    style="cursor:pointer; color:var(--color-red); font-weight:bold; margin-bottom:10px;">
+                                    Ver detalle <i class="fa-solid fa-chevron-down ml-2"></i></summary>
+                                <div class="flashcard-detail"
+                                    style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); overflow-x: auto;">
+                                    <table
+                                        style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left;">
+                                        <tr style="border-bottom: 1px solid var(--glass-border);">
+                                            <th style="padding:4px;">Jugador</th>
+                                            <th>D/90</th>
+                                            <th>Tkl</th>
+                                            <th>PrgP</th>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;">Koke</td>
+                                            <td>6.2</td>
+                                            <td>1.8</td>
+                                            <td>4.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;">De Paul</td>
+                                            <td class="text-blue">7.5</td>
+                                            <td>2.1</td>
+                                            <td class="text-green">5.8</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;">Barrios</td>
+                                            <td class="text-green">8.1</td>
+                                            <td class="text-green">2.5</td>
+                                            <td>3.9</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;">Llorente</td>
+                                            <td class="text-green">7.9</td>
+                                            <td>1.9</td>
+                                            <td class="text-blue">4.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;">Saul</td>
+                                            <td>5.8</td>
+                                            <td>1.4</td>
+                                            <td>2.8</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>

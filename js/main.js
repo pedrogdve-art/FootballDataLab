@@ -1,4 +1,4 @@
-﻿/**
+/**
  * MAIN.JS - FootballDataLab 
  * Handles DOM integration, Theme toggling, and Widget populations.
  */
@@ -217,13 +217,17 @@ const explorerApp = {
             $('#explorerTable').DataTable().destroy();
         }
 
-        const normalizeLiga = (ligaName) => {
-            if (!ligaName) return '';
+        const normalizeLiga = (selectLiga, dataLiga) => {
+            if(!dataLiga) return false;
             const map = {
-                'laliga': 'laliga', 'premier league': 'premier', 'bundesliga': 'bundesliga',
-                'seriea': 'serie a', 'serie a': 'serie a', 'ligue 1': 'ligue 1', 'todas': 'todas', 'all': 'all', 'premier': 'premier'
+                'laliga': ['laliga'],
+                'premier league': ['premier', 'premier league'],
+                'bundesliga': ['bundesliga'],
+                'seriea': ['serie a', 'seriea'],
+                'ligue 1': ['ligue 1', 'ligue1']
             };
-            return map[ligaName.toLowerCase()] || ligaName.toLowerCase();
+            const normSelect = Object.keys(map).find(k => k.includes(selectLiga.toLowerCase()));
+            return normSelect ? map[normSelect].includes(dataLiga.toLowerCase()) : false;
         };
 
         const liga = this.fLiga.value;
@@ -231,7 +235,7 @@ const explorerApp = {
         const tbody = document.getElementById('explorerBody');
 
         let filteredPlayers = this.allPlayers.filter(p => {
-            const mLiga = liga === 'all' || normalizeLiga(p.liga) === normalizeLiga(liga);
+            const mLiga = liga === 'all' || normalizeLiga(liga, p.liga);
             const mPos = pos === 'all' || p.pos === pos;
             return mLiga && mPos;
         });
